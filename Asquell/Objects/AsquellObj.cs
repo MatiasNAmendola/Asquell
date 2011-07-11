@@ -17,6 +17,7 @@ namespace Asquell.Objects
         MathsOperator = 5,
         BooleanOperator = 6,
         Array = 7,
+        Function = 8,
         Invalid = 99
     }
     public class AsquellObj
@@ -56,6 +57,11 @@ namespace Asquell.Objects
             {
                 this.parseValue = obj;
                 this.type = AsquellObjectType.Array;
+            }
+            else if (t == typeof(MemoryBlock))
+            {
+                this.parseValue = obj;
+                this.type = AsquellObjectType.Function;
             }
         }
         private int findStringEnd(string str, int start, char stringChar)
@@ -125,6 +131,7 @@ namespace Asquell.Objects
                             if (i + 1 != rawValue.Length)
                             { type = AsquellObjectType.Invalid; return; }
 
+                            parseValue = ((string)parseValue).Substring(1, ((string)parseValue).Length - 2);
                             type = AsquellObjectType.String;
                         }
                     }

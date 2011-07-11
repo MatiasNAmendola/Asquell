@@ -1,3 +1,17 @@
 Asquell Scripting Language
+==========================
+The fairly average lovechild of Assembly and SQL
 
-Information will be here at a later date
+
+Description
+===========
+
+I wanted to create a simple language with most of the standard features and was easily extendable.
+Asquell is not designed to be a fast language or a language replacement of things like Java or C#.
+Asquell is designed to be flexible and easy to learn.
+
+
+Features
+========
+
+Coming soon...
